@@ -9,6 +9,9 @@
     - name: Install EPEL repo.
       yum: name=epel-release state=present
 
+    - name: Install Root Certificates
+      yum: name=ca-certificates state=present
+
     - name: Import Remi GPG key.
       rpm_key:
         key: "https://rpms.remirepo.net/RPM-GPG-KEY-remi"
