@@ -8,6 +8,9 @@
   tasks:
     - name: Install EPEL repo.
       yum: name=epel-release state=present
+      
+    - name: Install Root Certificates
+      yum: name=ca-certificates state=latest
 
     - name: Import Remi GPG key.
       rpm_key:
